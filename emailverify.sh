@@ -3,14 +3,13 @@
 echo "welcome to email verification program"
 
 read -p "enter emailid: " emailid
-#verifying mandatory @
-emailidpat="^([A-Za-z0-9]+)?@[a-zA-Z]+"
+#verifying mandatory .com .co etc
+emailidpattern="^([A-Za-z0-9]+)?@[a-zA-Z]+.[a-zA-Z]{2,4}"
 
-if [[ $emailid =~ $emailidpat ]]
+if [[ $emailid =~ $emailidpattern ]]
 then
         echo "valid"
 else
         echo "invalid"
 fi
-
 
